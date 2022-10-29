@@ -18,12 +18,10 @@ $N = strlen($word);
 
 $letters = str_split($word);
 
-$count = 0;
-
-while ($count <= $N) {
+for ($i = 0; $i <= $N; $i++)
+{
     echo $word . PHP_EOL;
     array_unshift($letters, end($letters));
     array_pop($letters);
     $word = implode($letters);
-    $count++;
 }
